@@ -15,6 +15,7 @@ console = Console()
 @click.command()
 @click.argument("path", type=click.Path(exists=True), default=".")
 @click.option("--no-external", is_flag=True, help="Skip external URL checks")
+@click.option("--skip-pattern", "-s", multiple=True, help="Regex patterns to skip")
 @click.option("--concurrency", "-c", default=10, help="Max concurrent requests")
 @click.option("--timeout", "-t", default=15.0, help="Request timeout in seconds")
 def main(path: str, no_external: bool, concurrency: int, timeout: float) -> None:

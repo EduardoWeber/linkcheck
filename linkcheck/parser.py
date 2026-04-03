@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 
 LINK_PATTERN = re.compile(r"\[([^\]]*)\]\(([^)]+)\)")
+IMAGE_PATTERN = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
 
 
 @dataclass
