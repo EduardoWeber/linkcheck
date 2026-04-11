@@ -22,6 +22,10 @@ class Link:
     def is_anchor(self) -> bool:
         return self.url.startswith("#")
 
+    @property
+    def is_mailto(self) -> bool:
+        return self.url.startswith("mailto:")
+
 
 def extract_links(filepath: Path) -> list[Link]:
     """Extract all markdown links from a file."""
