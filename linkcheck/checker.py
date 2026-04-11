@@ -52,7 +52,7 @@ async def check_links(
         results.append(check_local(link))
 
     semaphore = asyncio.Semaphore(concurrency)
-    headers = {"User-Agent": "linkcheck/0.4.0"}
+    headers = {"User-Agent": "linkcheck/0.3.1"}
     async with httpx.AsyncClient(timeout=timeout, headers=headers) as client:
 
         async def _check(link: Link) -> Result:
