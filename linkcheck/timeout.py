@@ -11,3 +11,6 @@ class TimeoutConfig:
 
     def as_tuple(self) -> tuple[float, float, float]:
         return (self.connect, self.read, self.pool)
+
+    def total(self) -> float:
+        return self.connect + self.read + self.pool
